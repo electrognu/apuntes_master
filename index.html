@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes Master</title>
+</head>
+
+<body>
+    <h1>Areas de trabajo y acciones</h1>
+    <h2>Areas</h2>
+    <ul>
+        <li>Working Area: files of the project in which we are working on.</li>
+        <li>Staging Area:Temporal zone where the modifed files that we need to add to our version control are waiting to
+            be added to the repository..</li>
+        <li>Repository : files and logs on the repository</li>
+    </ul>
+    <h2>Acciones</h2>
+    <ul>
+        <li>Staging: Pass te files from the working area to stage area.</li>
+        <li>From the staging area to Repository we will do a commit.</li>
+    </ul>
+
+    <h1>Configuració git bàsica</h1>
+
+    <p>git config --global user.name minombre</p>
+
+    <p>git config --global user.email email@dominio.es</p>
+
+    <p>git config --global core.editor "code --wait"</p>
+
+    <p>git config --global -e (editamos la configuración GIT)</p>
+
+    <p>git config --global core.autocrlf input - en windows substituir "input" por "true"</p>
+
+
+    <h1> Utilizació bàsica</h1>
+
+    <p>git status #te dice como está el seguimento de los ficheros dentro del repositorio donde esteimos situados</p>
+    <p>git status -s # silent</p>
+
+    <p>git add test.txt #agregamos el fichero test.txt al “stage area"</p>
+
+    <p>git commit -m “Ejemplo de commit del fichero pascual.txt”</p>
+
+    <p>git rm fitxer.txt # Borra el fichero y realitza el paso a la tapa "stage" directament sin tenir que hacer "git
+        add"</p>
+
+    <p>git mv fitxer1 fitxer2 ## cambio de lugar o de nombre ...</p>
+
+
+    <p>Archivo gitignore : para ignorar archivos que no han de ser vistos ( claves )…</p>
+
+
+    <p>git log ( codi sha ) # Enseña que “commits” tienes y cuales son sus codigos SHA</p>
+
+    <p>git checkout ( codi sha ) #Mou al commit que te el numero sha</p>
+
+    <p>git checkout master # te mou a la branca principal</p>
+
+    <p>Retornar a un “commit” anterior:</p>
+    <p>git reset --hard &lt;commit-hash&gt;: Restablece el repositorio a un commit anterior y descarta todos los
+        cambios.</p>
+    <p>git revert &lt;commit-hash&gt;: Crea un nuevo commit que deshace los cambios de un commit anterior, manteniendo
+        el historial.</p>
+    <p>git checkout -b nombre-de-la-nueva-rama &lt;commit-hash&gt;: Crea una nueva rama desde un commit anterior.</p>
+
+
+    <h1>Otros</h1>
+    <p>git clone https://github.com/electrognu/apuntes_master.git</p>
+    <p>git init #per iniciar per primera vegada un repositori * sense provar</p>
+
+    <p>Ignorar els fitxers de configuracions o passwords, hem de posar la ruta dels fitxers en un fitxer de texte
+        anomenat :</p>
+    <p>.gitignore</p>
+
+
+    <h1>Branches</h1>
+    <p>Primer assegura-nos que no hi ha res per “comitejar”.</p>
+    <p>git status</p>
+    <p>git branch # ens diu on esteim…</p>
+    <p>git checkout -b rama git # rea una branca nova</p>
+
+    <h1>Merge</h1>
+    <p>Mesclar una feature a la branca Develop</p>
+    <p>git status -s # no hi ha de haver res a comitejar.</p>
+    <p>git checkout Develop # Canviam a la branca Develop a la qual que volem transmetre els canvis</p>
+    <p>git merge feature # merge</p>
+    <p>git branch -d feature # Esborrar la branca</p>
+
+    <p>Proces contribución a projecte.</p>
+
+    <p>Desde la página GitHub haz un fork del repositori clicando en el botón “Fork”</p>
+
+</body>
+
+</html>
